@@ -1,0 +1,4 @@
+furthered_imdb_pretrained/model_state.pdparams
+IMDB_data/IMDB_corpus.txt
+IMDB_data/IMDB_corpus_test.txt
+IMDB_data/IMDB_corpus_train.txt
