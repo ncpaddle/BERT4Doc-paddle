@@ -1,3 +1,0 @@
-[2021/11/01 17:44:27] root INFO: back_loss: 
-[2021/11/01 17:44:27] root INFO: 	mean diff: check passed: True, value: 1.2755393981933594e-05
-[2021/11/01 17:44:27] root INFO: diff check passed

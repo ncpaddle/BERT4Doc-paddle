@@ -1,0 +1,9 @@
+[2021/10/31 17:33:19] root INFO: input_ids: 
+[2021/10/31 17:33:19] root INFO: 	mean diff: check passed: True, value: 0.0
+[2021/10/31 17:33:19] root INFO: input_mask: 
+[2021/10/31 17:33:19] root INFO: 	mean diff: check passed: True, value: 0.0
+[2021/10/31 17:33:19] root INFO: segment_ids: 
+[2021/10/31 17:33:19] root INFO: 	mean diff: check passed: True, value: 0.0
+[2021/10/31 17:33:19] root INFO: label_ids: 
+[2021/10/31 17:33:19] root INFO: 	mean diff: check passed: True, value: 0.0
+[2021/10/31 17:33:19] root INFO: diff check passed

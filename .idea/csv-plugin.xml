@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\BERT4doc-fine-tuning\run_discriminative_paddle_decay.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\align_work\4.check_lr\align\align.py">
           <value>
             <Attribute>
