@@ -4,10 +4,6 @@
 
 Dataset: IMDB, TREC and yahoo-answers
 
-## Model Architecture
-
-![image-20211102160155873](C:\Users\10594\AppData\Roaming\Typora\typora-user-images\image-20211102160155873.png)
-
 ## Dependencies
 
 - python>=3.6
@@ -36,12 +32,30 @@ Dataset: IMDB, TREC and yahoo-answers
 
 
 
+
+
+TREC数据集
+
+- 用作者进一步预训练的模型：0.93
+- 用自己进一步预训练的模型：0.92
+
+IMDB数据集
+
+- 用作者进一步预训练的模型：0.94756
+- 用自己进一步预训练的模型：
+
+
+
+
+
+
+
 ## Align
 
-- `forward_diff`: [model_diff.txt](https://github.com/ncpaddle/JointBERT-paddle/blob/main/align_works/1_check_forward/log_diff/model_diff.txt)
-- `metric_diff` and `loss_diff`: [metric_loss_diff.txt](https://github.com/ncpaddle/JointBERT-paddle/blob/main/align_works/3_4_check_metric_loss/log_diff/metric_diff_log.txt)
-- `backward_diff`: [backward_loss_diff.txt](https://github.com/ncpaddle/JointBERT-paddle/blob/main/align_works/5-7-8_check_optim-norm-backward/log_diff/loss_diff.txt)
-- `train_align`: experiment results
+- `forward_diff`: [model_diff.txt](https://github.com/ncpaddle/BERT4Doc-paddle/blob/main/align_results/1.check_forward/log_diff/model_diff.txt)
+- `metric_diff` and `loss_diff`: [metric_loss_diff.txt](https://github.com/ncpaddle/BERT4Doc-paddle/blob/main/align_results/3.check_metric_loss/log_diff/metric_diff_log.txt)
+- `learning_rate_diff`: [lr_diff.txt](https://github.com/ncpaddle/BERT4Doc-paddle/blob/main/align_results/4.check_lr/log_diff/lr_diff_log.txt)
+- `backward_diff`: [backward_loss_diff.txt](https://github.com/ncpaddle/BERT4Doc-paddle/blob/main/align_results/5.check_backward/log_diff/back_loss_log2.txt)
 
 More details about align works in [here](https://github.com/ncpaddle/JointBERT-paddle/tree/main/align_works).
 
