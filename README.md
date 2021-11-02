@@ -32,7 +32,7 @@ Dataset: IMDB, TREC and yahoo-answers
 
 
 
-
+在paddle代码上：
 
 TREC数据集
 
@@ -42,7 +42,15 @@ TREC数据集
 IMDB数据集
 
 - 用作者进一步预训练的模型：0.94756
-- 用自己进一步预训练的模型：
+- 用自己进一步预训练的模型：0.94216
+
+
+
+在pytorch代码上：
+
+TREC： 97点多
+
+IMDB：95点多
 
 
 
