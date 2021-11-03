@@ -1,8 +1,10 @@
 # BERT4Doc-paddle
 
-(Unofficial) **Paddle** implementation of `BERT4Doc`: [How to Fine-Tune BERT for Text Classification?](https://github.com/xuyige/BERT4doc-Classification)
+- (Unofficial) The repo is **Paddle** implementation of `BERT4Doc`.
+- paper: [How to Fine-Tune BERT for Text Classification?](https://github.com/xuyige/BERT4doc-Classification)
+- unofficial pytorch implementation: [xuyige/BERT4doc-Classification: Code and source for paper ](https://github.com/xuyige/BERT4doc-Classification)
 
-Dataset: IMDB, TREC and yahoo-answers
+- Dataset: IMDB, TREC and yahoo-answers
 
 ## Dependencies
 
@@ -17,14 +19,64 @@ Dataset: IMDB, TREC and yahoo-answers
 ## Further Pre-training
 
 1. Executing further pre-training based on IMDB dataset:
+
+```bash
+python main.py \
+  --data_dir data/imdb_pretraining.json \
+  --model_dir further_imdb_pretraining \
+  --max_steps 100000 \
+  --model_name_or_path bert-base-uncased
+```
+
 2. Executing further pre-training based on yahoo-answers dataset:
+
+```bash
+python main.py \
+  --data_dir data/yahoo_pretraining.json \
+  --model_dir further_imdb_pretraining \
+  --max_steps 100000 \
+  --model_name_or_path bert-base-uncased
+```
+
+You can download models trained by us in [here](https://drive.google.com/drive/folders/1_YDaG37w8EpVhiRIMsNPn00JYYUsULOU?usp=sharing). 
 
 
 
 ## Fine-tuning
 
 1. Using the pre-training model based on IMDB to fine-tuning IMDB dataset;
+
+```bash
+python run_discriminative_paddle_decay.py \
+                          --data_dir="IMDB_data" \
+                          --task_name="IMDB" \
+                          --output_dir="imdb_output" \
+                          --model_name_or_path="furthered_imdb_pretrained" \
+                          --model_dir="imdb_model" \
+                          --do_lower_case \
+                          --do_train --do_eval --discr\
+                          --layers 11 \
+                          --trunc_medium 128 \
+                          --layer_learning_rate 2e-5 \
+                          --layer_learning_rate_decay 0.95
+```
+
 2. Using the pre-traning model based on yahoo-answers to fine-tuning TREC dataset;
+
+```bash
+python run_discriminative_paddle_decay.py \
+                          --data_dir="TREC_data" \
+                          --task_name="TREC" \
+                          --output_dir="trec_output" \
+                          --model_name_or_path="furthered_trec_pretrained" \
+                          --model_dir="trec_model" \
+                          --do_lower_case \
+                          --do_train --do_eval --discr\
+                          --layers 11 \
+                          --trunc_medium 128 \
+                          --layer_learning_rate 2e-5 \
+                          --layer_learning_rate_decay 0.95
+```
 
 
 
@@ -32,29 +84,10 @@ Dataset: IMDB, TREC and yahoo-answers
 
 
 
-在paddle代码上：
-
-TREC数据集
-
-- 用作者进一步预训练的模型：0.93
-- 用自己进一步预训练的模型：0.92
-
-IMDB数据集
-
-- 用作者进一步预训练的模型：0.94756
-- 用自己进一步预训练的模型：0.94216
-
-
-
-在pytorch代码上：
-
-TREC： 97点多
-
-IMDB：95点多
-
-
-
-
+| Further pre-training Dataset | Fine-tuning Dataset | Accuracy |
+| ---------------------------- | ------------------- | -------- |
+| IMDB                         | IMDB                | 94,76    |
+| Yah. A                       | TREC                | 93.00    |
 
 
 
